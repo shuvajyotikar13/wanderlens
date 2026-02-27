@@ -1,0 +1,36 @@
+{
+  "mappings": {
+    "properties": {
+      "location_id": {
+        "type": "keyword"
+      },
+      "destination_name": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "description": {
+        "type": "text"
+      },
+      "image_url": {
+        "type": "keyword"
+      },
+      "category": {
+        "type": "keyword"
+      },
+      "price_range": {
+        "type": "keyword"
+      },
+      "embedding": {
+        "type": "dense_vector",
+        "dims": 1408,
+        "index": true,
+        "similarity": "cosine"
+      }
+    }
+  }
+}
